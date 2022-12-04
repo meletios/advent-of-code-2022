@@ -29,7 +29,6 @@ fun main() {
 
             if ((leftA <= rightA || leftA <= rightB) && leftB >= rightB) {
                 overlappingPairs++
-
             } else if (rightA <= leftA && rightB >= leftB) {
                 overlappingPairs++
             } else if (leftB >= rightA || rightB <= leftA) {
@@ -39,6 +38,7 @@ fun main() {
         return if (looseOverlapping) looseOverlappingPairs + overlappingPairs else overlappingPairs
     }
 
-    val inputPart2 = readInput("Day04")
-    println("Part 2 Result - ${getResults(inputPart2, true)}")
+    val inputPart = readInput("Day04")
+    println("Part 1 Result - ${getResults(inputPart, false)}")
+    println("Part 2 Result - ${getResults(inputPart, true)}")
 }
